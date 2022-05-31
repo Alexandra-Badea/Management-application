@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    margin: 2em 3em;
+    font-size: 1rem;
+    padding: .2em .8em;
+    background-color: #3385ff;
+    color: #eee;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #000;
+    cursor: pointer;
+    outline: none;
+    transition: .2s all;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px #000;
+}
+
+button:focus {
+    outline: none;
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px #000;
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1a75ff;
+}
+
+a:focus {
+    outline: none;
+    color: #1a75ff;
+}
+
+header {
+    background-color: #ffebcc;
+}
+
+nav {
+    width: 97%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: .4em;
+}
+
+.logo img {
+    width: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 1em;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 1.6em;
+}
+
+nav ul li a {
+    font-size: 1.3rem;
+}
+
+.active {
+    color: #1a75ff;
+}
+
+form {
+    margin: 2em 3em; 
+    display: none;
+}
+
+form div {
+    margin: .8em 0;
+}
+
+form label {
+    display: inline-block;
+    width: 70px;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.error i {
+    color: #008000;
+}
+
+form button {
+    margin: .4em;
+}
+
+.cancel_form {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.container_table {
+    width: 98%;
+    margin: 2em auto;
+    display: none;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .7);
+    border-collapse: collapse;
+} 
+
+th {
+    background-color: #faebd7;
+    border-bottom: 1px solid #000;
+}
+
+.no-emp_container {
+    margin-left: 3em;
+    font-weight: 600;
+    display: none;
+}
+
+.btn_save {
+    margin: .8em;
+    padding: .19em .4em;
+    display: none;
+}
+
+.btn_edit,
+.btn_delete {
+    margin: 1em;
+}
+
+.btn_delete {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.emp_link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.over_worker {
+    color: red;
+}
+
+
