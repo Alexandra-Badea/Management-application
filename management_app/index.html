@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Employees</title>
+        <link rel="icon" type="image/x-icon" href="logo.png">
+    </head>
+
+    <body onload="doStartupConfig()">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <ul>
+                    <li><a href="index.html" class="active">Employees</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <button class="add_emp" id="add_emp" onclick="addNewEmp()">Add New Employee</button>
+
+            <form id="add_form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Alex" required onkeyup="checkName(); validateForm()">
+                    <span class="error" id="name-error"></span>
+                </div>
+
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="text" name="age" id="age" placeholder="18-65" required onkeyup="checkAge(); validateForm()">
+                    <span class="error" id="age-error"></span>
+                </div>
+
+                <div>
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="text" name="birthdate" id="birthdate" placeholder="YYYY-MM-DD" required onkeyup="checkBirthdate(); validateForm()">
+                    <span class="error" id="birthdate-error"></span>
+                </div>
+
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="text" name="phone" id="phone" placeholder="07..." required onkeyup="checkPhone(); validateForm()">
+                    <span class="error" id="phone-error"></span>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="email@email.com" required onkeyup="checkEmail(); validateForm()">
+                    <span class="error" id="email-error"></span>
+                </div>
+
+                <button type="button" id="btn_add" onclick="addEmp()" disabled>Add</button>
+                <button type="button" class="btn_save" id="btn_save" onclick="saveEditEmp()" disabled>Save</button>
+                <button class="cancel_form" id="cancel_form" onclick="cancelAddForm()">Cancel</button>
+            </form>
+
+            <div class="no-emp_container" id="no-emp_container">
+                <p>No employee saved yet.</p>
+            </div>
+
+            <div class="container_table" id="container_table">
+                <table class="table" id="table"></table>
+            </div>
+        </main>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

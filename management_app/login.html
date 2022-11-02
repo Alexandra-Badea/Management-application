@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/login.css">
+        <title>Login</title>
+        <link rel="icon" type="image/x-icon" href="logo.png">
+    </head>
+
+    <body  onload="checkLoggedInUser()">
+        <div class="container">
+            <div class="container_welcome" id="container_welcome">
+                <h1>Welcome</h1>
+                <button onclick="showLoginForm()">Get Started</button>
+            </div>
+    
+            <div class="container-login" id="container-login">
+                <form class="login_form">
+                    <h2>Login Form</h2>
+
+                    <div>
+                        <label for="username"><i class="fa-solid fa-user-tie"></i></label>
+                        <input type="text" name="username" id="username" placeholder="username" required>
+                    </div>
+
+                    <div>
+                        <label for="password"><i class="fa-solid fa-key"></i></label>
+                        <input type="password" name="password" id="password" placeholder="password" required>
+                    </div>
+
+                    <div class="remember_box">
+                        <input type="checkbox" name="remember" id="remember_box" value="rememberMe" onclick="rrr()">
+                        <label for="remember_box">Remember me</label>
+                    </div>
+
+                    <button type="button" onclick="checkUser(); rememberMe()">Login</button>
+
+                    <div class="forgot_pass">
+                        <p><a href="#">Forgot</a> password?</p>
+                    </div>
+
+                    <div class="msg" id="success_msg">
+                        <p>Your will be redirected to your account! <i class="fa-solid fa-circle-check"></i></p>
+                    </div>
+
+                    <div class="error_msg msg" id="error_msg">
+                        <p>Your credentials are wrong! <i class="fa-solid fa-circle-exclamation"></i></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/login.js"></script>
+    </body>
+</html>

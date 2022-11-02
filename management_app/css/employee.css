@@ -1,0 +1,30 @@
+.avatar {
+    width: 90%;
+    margin: 3em auto;
+}
+
+.avatar i {
+    font-size: 7rem;
+}
+
+h3 {
+    margin: 0 5em;
+}
+
+.prj_container {
+    width: 93%;
+    margin: 2em auto;
+}
+
+select {
+    width: 13rem;
+    height: 1.6rem;
+    margin: 0 1em;
+    text-align: center;
+    border-radius: 4px;
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid #1a75ff;
+}

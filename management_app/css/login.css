@@ -1,0 +1,122 @@
+*,
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    margin: .6em auto;
+    font-size: 1.4rem;
+    padding: .4em .8em;
+    border: none;
+    border-radius: 8px;
+    background: #4568dc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4568dc, #b06ab3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4568dc, #b06ab3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    opacity: .5;
+    transition: .5s ease-out;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+button:focus {
+    outline: none;
+    opacity: 1;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_welcome h1 {
+    color: rgba(0, 0, 0, .7);
+    font-size: 3rem;
+}
+
+.container-login {
+    width: 30%;
+    text-align: center;
+    animation-name: loginzoom;
+    animation-duration: .6s;
+    display: none;
+}
+
+@keyframes loginzoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.login_form {
+    border: 1px solid #000;
+    padding: 1.2em 2em;
+}
+
+.login_form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.6em;
+}
+
+.login_form div {
+    margin-bottom: 2em;
+}
+
+.login_form input {
+    width: 70%;
+    margin-left: .6em;
+    padding: .4em;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.login_form .remember_box {
+    display: flex;
+    align-items: center;
+}
+
+.login_form input[type='checkbox'] {
+    width: 10%;
+}
+
+.login_form input:focus {
+    outline: none;
+    border-bottom: 2px solid #ffa31a;
+}
+
+.login_form button {
+    font-size: 1.2rem;
+    background: #F3904F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.forgot_pass {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.4em;
+}
+
+.forgot_pass a:hover,
+.forgot_pass a:focus {
+    outline: none;
+    color: #ffa31a; 
+}
+
+.msg {
+    text-align: center;
+    color: #008000;
+    display: none;
+}
+
+.error_msg {
+    color: #ff0000;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/employee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Employees</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body onload="doStartupConfig()">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Employees</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="avatar" class="avatar"></div>
+        <h3 id="emp_name"></h3>
+
+        <div class="prj_container">
+            <label for="projects">Project:</label>
+            <select name="projects" id="projects" onchange="saveEmpPrj()">
+            </select>
+        </div>
+
+        <button class="add_emp" id="add_emp" onclick="addNewEmp()">Add Data</button>
+
+            <form id="add_form">
+                <div>
+                    <label for="holiday">Holiday:</label>
+                    <input type="text" name="holiday" id="holiday" placeholder="Holiday" required
+                        onkeyup="checkHoliday(); validateForm()">
+                    <span class="error" id="holiday-error"></span>
+                </div>
+            
+                <div>
+                    <label for="start_date">Start date:</label>
+                    <input type="text" name="start_date" id="start_date" placeholder="YYYY-MM-DD" required
+                        onkeyup="checkStartDate(); validateForm()">
+                    <span class="error" id="start_date-error"></span>
+                </div>
+            
+                <div>
+                    <label for="end_date">End date:</label>
+                    <input type="text" name="end_date" id="end_date" placeholder="YYYY-MM-DD" required
+                        onkeyup="checkEndDate(); validateForm()">
+                    <span class="error" id="end_date-error"></span>
+                </div>
+            
+                <button type="button" id="btn_add" onclick="addData()" disabled>Add</button>
+                <button type="button" class="btn_save" id="btn_save" onclick="saveEditData()" disabled>Save</button>
+                <button class="cancel_form" id="cancel_form" onclick="cancelAddForm()">Cancel</button>
+            </form>
+
+            <div class="no-emp_container" id="no-emp_container">
+                <p>No data saved yet.</p>
+            </div>
+            
+            <div class="container_table" id="container_table">
+                <table class="table" id="table"></table>
+            </div>
+    </main>
+
+    <script src="js/employee.js"></script>
+</body>
+</html>
